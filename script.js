@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
 
   const player = new Player(canvas.width, canvas.height);
 
-  console.log(player);
+  player.draw(ctx);
 });
 
-// 6.01
+// 6.10
