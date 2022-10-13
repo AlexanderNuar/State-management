@@ -1,4 +1,5 @@
 import Player from "./player.js";
+import inputHandler from "./input.js";
 
 window.addEventListener("load", function () {
   /** @type {HTMLCanvasElement} */
