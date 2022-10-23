@@ -13,6 +13,13 @@ window.addEventListener("load", function () {
   const player = new Player(canvas.width, canvas.height);
 
   player.draw(ctx);
+  const input = new inputHandler();
+
+  function animate() {
+    console.log(input.lastKey);
+    requestAnimationFrame(animate);
+  }
+  animate();
 });
 
-// 6.10
+// 6.16
