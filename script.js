@@ -1,5 +1,6 @@
 import Player from "./player.js";
 import inputHandler from "./input.js";
+import { drawStatusText } from "./utils.js";
 
 window.addEventListener("load", function () {
   /** @type {HTMLCanvasElement} */
@@ -12,14 +13,15 @@ window.addEventListener("load", function () {
 
   const player = new Player(canvas.width, canvas.height);
 
-  player.draw(ctx);
   const input = new inputHandler();
 
   function animate() {
-    console.log(input.lastKey);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    player.draw(ctx);
+    drawStatusText(ctx, input);
     requestAnimationFrame(animate);
   }
   animate();
 });
 
-// 6.16
+// 6.18
